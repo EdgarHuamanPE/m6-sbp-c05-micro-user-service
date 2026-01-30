@@ -1,28 +1,9 @@
 server:
   port: 8080
-  address: 0.0.0.0
 
 spring:
+  profiles:
+    active: local
+
   application:
     name: user-service
-
-  datasource:
-    url: jdbc:postgresql://postgres-user-dev:5432/userdb
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
-
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
-    baseline-on-migrate: true
-    validate-on-migrate: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
-  health:
-    enabled: true
-    show-details: always
