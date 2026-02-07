@@ -2,6 +2,7 @@
 #Use eclipse temurin JRE17  as the  base image
 #FROM eclipse-temurin:17-jdk
 FROM eclipse-temurin:17-jre-alpine
+RUN apk add --no-cache curl
 #set the  working directory inside  the container
 WORKDIR /app
 

@@ -1,6 +1,7 @@
 package com.tecsup.app.micro.user.mapper;
 
 
+import com.tecsup.app.micro.user.dto.CreateRequestUser;
 import com.tecsup.app.micro.user.dto.User;
 import com.tecsup.app.micro.user.entity.UserEntity;
 import org.mapstruct.Mapper;
@@ -15,7 +16,7 @@ public interface UserMapper {
 
     User toDomain(UserEntity entity);
     UserEntity toEntity(User domain);
-
-    List<User> toDomain(List<UserEntity> entities);
+    User toDomainFromInput(CreateRequestUser createRequestUser);
+    List<User> toDomainLista(List<UserEntity> entities);
 
 }
